@@ -71,7 +71,6 @@
     [(repeat? exp) '()]
     [(list-of-symbols? exp) exp]))
 
-; basically 'member'
 (define (is-in? item lst)
   (cond
     [(empty? lst) #f] [(equal? item (car lst)) #t] [else (is-in? item (cdr lst))]))
